@@ -1,6 +1,18 @@
+#include <QApplication>
 #include <iostream>
+#include <string>
+#include "includes/MainWindow.hpp"
 
 
-int main (int argv, char **args) {
-    return EXIT_SUCCESS;
-};
+int main(int argc, char *argv[]) {
+    if (argc < 3)
+        return 0;
+
+    QApplication a(argc, argv);
+
+    MainWindow * mainwin = new MainWindow(std::stoi(argv[1]), std::stoi(argv[2]), std::string(argv[3]));
+
+    mainwin->show();
+
+    return a.exec();
+}
