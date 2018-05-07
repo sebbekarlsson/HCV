@@ -9,7 +9,7 @@
 
 > For example:
 
-    $ hcv 150 150 "<h1>Hello</h1>"
+    $ hcv 150 150 "<h1>hello</h1>"
 
 > This will create a window looking like this:
 
