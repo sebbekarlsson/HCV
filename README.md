@@ -16,6 +16,11 @@
 ![example.png](example.png)
 
 ## Installing
+> The requirements are:
+
+* Qt5
+* a C++ compiler (g++ for example)
+
 ### Linux
 > Run this script to install on Linux:
 
