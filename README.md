@@ -1,6 +1,7 @@
 # HCV
 > HTML CSS View.  
-> A simple tool for creating windows and popup messages using HTML and CSS.
+> A simple tool for creating windows and popup messages using HTML and CSS.  
+> _(Javascript sort of works as well)_
 
 ## Usage
 > To create a Window:
