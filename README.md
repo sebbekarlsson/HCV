@@ -25,6 +25,10 @@
 
     $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
 
+## Accessing the file system and things like that
+> To be able to access the file system, you could for example run a flask
+> server under HCV. [Here is an example](https://github.com/sebbekarlsson/flask-hcv-example).
+
 ## Installing
 > The requirements are:
 
