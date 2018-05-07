@@ -12,6 +12,7 @@
     $ hcv 150 150 "<h1>Hello</h1>"
 
 > This will create a window looking like this:
+
 ![example.png](example.png)
 
 ## Installing
