@@ -5,8 +5,10 @@
 
 
 int main(int argc, char *argv[]) {
-    if (argc < 3)
+    if (argc < 3) {
+        std::cout << "Usage: <width> <height> <html>" << std::endl;
         return 0;
+    }
 
     QApplication a(argc, argv);
 
