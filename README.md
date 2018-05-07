@@ -21,6 +21,10 @@
 
     $ hcv 640 480 "<pre>$(< myfile.txt)</pre>"
 
+> Handle a button click:
+
+    $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>"
+
 ## Installing
 > The requirements are:
 
