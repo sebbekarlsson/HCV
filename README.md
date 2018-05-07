@@ -15,6 +15,11 @@
 
 ![example.png](example.png)
 
+> The possibilities are endless, for example here is how to create a  
+> file viewer:
+
+    $ hcv 640 480 "<pre>$(< myfile.txt)</pre>"
+
 ## Installing
 > The requirements are:
 
