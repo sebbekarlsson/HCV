@@ -1,7 +1,7 @@
 #include <QApplication>
 #include <iostream>
 #include <string>
-#include "includes/MainWindow.hpp"
+#include "includes/HCV.hpp"
 
 
 int main(int argc, char *argv[]) {
@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
 
-    MainWindow * mainwin = new MainWindow(std::stoi(argv[1]), std::stoi(argv[2]), std::string(argv[3]));
+    HCV * mainwin = new HCV(std::stoi(argv[1]), std::stoi(argv[2]), "", std::string(argv[3]));
 
     mainwin->show();
 
