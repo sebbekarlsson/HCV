@@ -5,13 +5,14 @@
 #include <QWebEngineView>
 #include <QtWidgets>
 #include <QMainWindow>
+#include <QUrl>
 
 
 class HCV : public QMainWindow {
     Q_OBJECT
 
     public:
-        HCV(int width, int height, std::string title, std::string contents);
+        HCV(int width, int height, std::string title, std::string contents, QUrl* url);
 
     private:
         QWebEngineView* m_pWebView;

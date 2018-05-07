@@ -6,11 +6,11 @@
 ## Usage
 > To create a Window:
 
-    $ hcv <width> <height> <html>
+    $ hcv <width> <height> <html> <is_url:int>
 
 > For example:
 
-    $ hcv 150 150 "<h1>hello</h1>"
+    $ hcv 150 150 "<h1>hello</h1>" 0
 
 > This will create a window looking like this:
 
@@ -19,11 +19,11 @@
 > The possibilities are endless, for example here is how to create a  
 > file viewer:
 
-    $ hcv 640 480 "<pre>$(< myfile.txt)</pre>"
+    $ hcv 640 480 "<pre>$(< myfile.txt)</pre>" 0
 
 > Handle a button click:
 
-    $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>"
+    $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
 
 ## Installing
 > The requirements are:
