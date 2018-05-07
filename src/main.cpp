@@ -12,7 +12,12 @@ int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
 
-    HCV * mainwin = new HCV(std::stoi(argv[1]), std::stoi(argv[2]), "", std::string(argv[3]));
+    HCV * mainwin = new HCV(
+        std::stoi(argv[1]),
+        std::stoi(argv[2]),
+        "",
+        std::string(argv[3])
+    );
 
     mainwin->show();
 
