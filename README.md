@@ -25,6 +25,12 @@
 
     $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
 
+> You can also open a URL:
+
+    $ hcv 640 480 "http://localhost/" 1
+
+> the `1` in the end is important, this tells the program that you are using a URL.
+
 ## Accessing the file system and things like that
 > To be able to access the file system, you could for example run a flask
 > server under HCV. [Here is an example](https://github.com/sebbekarlsson/flask-hcv-example).
