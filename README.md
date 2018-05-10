@@ -6,11 +6,11 @@
 ## Usage
 > To create a Window:
 
-    $ hcv <width> <height> <html> <is_url:int>
+    $ hcv -w <width> -h <height> -c <html/contents> -u <url>
 
 > For example:
 
-    $ hcv 150 150 "<h1>hello</h1>" 0
+    $ hcv -w 150 -h 150 -c "<h1>hello</h1>"
 
 > This will create a window looking like this:
 
@@ -19,17 +19,15 @@
 > The possibilities are endless, for example here is how to create a  
 > file viewer:
 
-    $ hcv 640 480 "<pre>$(< myfile.txt)</pre>" 0
+    $ hcv -w 640 -h 480 -c "<pre>$(< myfile.txt)</pre>"
 
 > Handle a button click:
 
-    $ hcv 300 300 "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
+    $ hcv -w 300 -h 300 -c "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
 
 > You can also open a URL:
 
-    $ hcv 640 480 "http://localhost/" 1
-
-> the `1` in the end is important, this tells the program that you are using a URL.
+    $ hcv -w 640 -h 480 -u "http://localhost/"
 
 ## Accessing the file system and things like that
 > To be able to access the file system, you could for example run a flask

@@ -5,27 +5,41 @@
 
 
 int main(int argc, char *argv[]) {
-    int is_url = 0;
-
-    if (argc < 5) {
-        std::cout << "Usage: <width> <height> <html> <is_url:int>" << std::endl;
-        return 0;
-    }
-
-    is_url = std::stoi(argv[4]);
-
+    std::string title = "";
+    std::string contents = "";
+    int width = 640;
+    int height = 480;
     QUrl* url = nullptr;
 
-    if (is_url)
-        url = new QUrl(argv[3]);
+    for (int i = 0; i < argc; i++) {
+        std::string argument = argv[i];
+        std::string value = "";
 
+        if (argument.find("-") != std::string::npos) {
+            argument.erase(0, 1);
+            value = argv[std::min(argc, i + 1)];
+
+            if (argument == "u")
+                url = new QUrl(value.c_str());
+
+            if (argument == "c")
+                contents = value;
+
+            if (argument == "w")
+                width = std::stoi(value);
+
+            if (argument == "h")
+                height = std::stoi(value);
+        }
+    }
+    
     QApplication a(argc, argv);
 
     HCV * mainwin = new HCV(
-        std::stoi(argv[1]),
-        std::stoi(argv[2]),
-        "",
-        std::string(argv[3]),
+        width,
+        height,
+        title,
+        contents,
         url
     );
 
