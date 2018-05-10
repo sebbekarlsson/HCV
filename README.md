@@ -23,7 +23,7 @@
 
 > Handle a button click:
 
-    $ hcv -w 300 -h 300 -c "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>" 0
+    $ hcv -w 300 -h 300 -c "<button id='btn'>Click</button><script>document.getElementById('btn').addEventListener('click', function() { alert(1); })</script>"
 
 > You can also open a URL:
 
