@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <iostream>
 #include <string>
+#include <vector>
 #include "includes/HCV.hpp"
 
 
@@ -10,12 +11,28 @@ int main(int argc, char *argv[]) {
     int width = 640;
     int height = 480;
     QUrl* url = nullptr;
+    
+    // available arguments
+    std::vector<std::string> arguments = {
+        "-w",
+        "-h",
+        "-u",
+        "-c"
+    };
 
+    // parsing the arguments
     for (int i = 0; i < argc; i++) {
-        std::string argument = argv[i];
+        std::string argument = std::string(argv[i]);
         std::string value = "";
 
-        if (argument.find("-") != std::string::npos) {
+        // check if found argument is available
+        if (
+            std::find(
+                arguments.begin(),
+                arguments.end(),
+                argument
+            ) != arguments.end()
+        ) {
             argument.erase(0, 1);
             value = argv[std::min(argc, i + 1)];
 
@@ -35,6 +52,7 @@ int main(int argc, char *argv[]) {
     
     QApplication a(argc, argv);
 
+    // create the window
     HCV * mainwin = new HCV(
         width,
         height,
