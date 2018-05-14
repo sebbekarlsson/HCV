@@ -2,8 +2,15 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdlib.h>
 #include "includes/HCV.hpp"
 
+
+void print_help() {
+    std::cout
+        << "Usage: "
+        << "-w width -h height -c contents/HTML -u URL" << std::endl;
+};
 
 int main(int argc, char *argv[]) {
     std::string title = "";
@@ -20,6 +27,11 @@ int main(int argc, char *argv[]) {
         "-c"
     };
 
+    if (argc < 2) {
+        print_help();
+        return EXIT_FAILURE;
+    }
+
     // parsing the arguments
     for (int i = 0; i < argc; i++) {
         std::string argument = std::string(argv[i]);
@@ -35,6 +47,11 @@ int main(int argc, char *argv[]) {
         ) {
             argument.erase(0, 1);
             value = argv[std::min(argc, i + 1)];
+
+            if (value.empty() || value == argument) {
+                print_help();
+                return EXIT_FAILURE;
+            }
 
             if (argument == "u")
                 url = new QUrl(value.c_str());
