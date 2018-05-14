@@ -3,6 +3,8 @@
 > A simple tool for creating windows and popup messages using HTML and CSS.  
 > _(Javascript sort of works as well)_
 
+> [LICENSE.md](LICENSE)
+
 ## Usage
 > To create a Window:
 
