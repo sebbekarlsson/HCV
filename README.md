@@ -1,7 +1,7 @@
 # HCV
 > HTML CSS View.  
-> A simple tool for creating windows and popup messages using HTML and CSS.  
-> _(Javascript sort of works as well)_
+> A simple tool for creating windows and popup messages using HTML and CSS and
+> Javascript.
 
 > [LICENSE](LICENSE.md)
 
