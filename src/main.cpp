@@ -14,8 +14,6 @@ void print_help() {
 };
 
 int main(int argc, char *argv[]) {
-    print_license();
-
     std::string title = "";
     std::string contents = "";
     int width = 640;
@@ -69,6 +67,8 @@ int main(int argc, char *argv[]) {
                 height = std::stoi(value);
         }
     }
+    
+    print_license();
     
     QApplication a(argc, argv);
 
