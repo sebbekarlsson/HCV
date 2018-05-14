@@ -4,6 +4,7 @@
 #include <vector>
 #include <stdlib.h>
 #include "includes/HCV.hpp"
+#include "includes/license.hpp"
 
 
 void print_help() {
@@ -13,6 +14,8 @@ void print_help() {
 };
 
 int main(int argc, char *argv[]) {
+    print_license();
+
     std::string title = "";
     std::string contents = "";
     int width = 640;
