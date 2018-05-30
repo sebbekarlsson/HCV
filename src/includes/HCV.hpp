@@ -15,6 +15,6 @@ class HCV : public QMainWindow {
         HCV(int width, int height, std::string title, std::string contents, QUrl* url);
 
     private:
-        QWebEngineView* m_pWebView;
+        QWebEngineView* webview;
 };
 #endif

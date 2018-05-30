@@ -13,13 +13,12 @@ HCV::HCV(int width, int height, std::string title, std::string contents, QUrl* u
 
     setWindowTitle(tr(title.c_str()));
 
-    m_pWebView = new QWebEngineView(this);
+    this->webview = new QWebEngineView(this);
 
-    if (url == nullptr) {
-        m_pWebView->setHtml(contents.c_str());
-    } else {
-        m_pWebView->setUrl(*url);
-    }
+    if (url == nullptr)
+        this->webview->setHtml(contents.c_str());
+    else
+        this->webview->setUrl(*url);
     
-    this->setCentralWidget(m_pWebView);
+    this->setCentralWidget(webview);
 }

@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     // create the window
-    HCV * mainwin = new HCV(
+    HCV* mainwin = new HCV(
         width,
         height,
         title,
