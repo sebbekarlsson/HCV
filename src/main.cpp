@@ -54,17 +54,15 @@ int main(int argc, char *argv[]) {
                 return EXIT_FAILURE;
             }
 
-            if (argument == "u")
+            if (argument == "u") {
                 url = new QUrl(value.c_str());
-
-            if (argument == "c")
+            } else if (argument == "c") {
                 contents = value;
-
-            if (argument == "w")
+            } else if (argument == "w") {
                 width = std::stoi(value);
-
-            if (argument == "h")
+            } else if (argument == "h") {
                 height = std::stoi(value);
+            }
         }
     }
     
