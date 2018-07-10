@@ -17,7 +17,7 @@ HCV::HCV(
 ) {
     this->setFixedSize(width, height);
 
-    setWindowTitle(tr(title.c_str()));
+    this->setWindowTitle(tr(title.c_str()));
 
     this->webview = new QWebEngineView(this);
 
