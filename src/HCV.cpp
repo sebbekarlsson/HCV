@@ -8,7 +8,13 @@
  * @param std::string contents - Content to be rendered
  * @param *Qurl url - url to open
  */
-HCV::HCV(int width, int height, std::string title, std::string contents, QUrl* url) {
+HCV::HCV(
+    int width,
+    int height,
+    std::string title,
+    std::string contents,
+    QUrl* url
+) {
     this->setFixedSize(width, height);
 
     setWindowTitle(tr(title.c_str()));
