@@ -41,6 +41,10 @@
 * Qt5
 * a C++ compiler (g++ for example)
 
+> To install the requirements on Debian or Ubuntu, run:
+
+    apt-get install g++ qt5-default qt5-qmake qtbase5-dev qtmultimedia5-dev qtdeclarative5-dev libqt5xmlpatterns5-dev  libqt5webkit5-dev qtwebengine5-dev libhunspell-dev
+
 ### Linux
 > Run this script to install on Linux:
 
